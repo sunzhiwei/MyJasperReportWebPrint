@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<title>´òÓ¡´°¿Ú</title>
+	</head>
+	<script language="javascript"> 
+	<!-- 
+		function openApp() 
+		{ 
+			var url = "../JRPrintServlet"; 
+			document.write('<APPLET ID="JrPrt" CODE = "JRPrinterApplet.class" CODEBASE = "applets" ARCHIVE = "jasperreports-3.5.2-applet.jar,commons-logging-1.0.2.jar,commons-collections-2.1.jar" WIDTH = "0" HEIGHT = "0">'); 
+			document.write('<PARAM NAME = "type" VALUE="application/x-java-applet;version=1.2.2">'); 
+			document.write('<PARAM NAME = "scriptable" VALUE="false">'); 
+			document.write('<PARAM NAME = "REPORT_URL" VALUE ="'+url+'">'); 
+			document.write('</APPLET>'); 
+		}
+		--> 
+	</script>
+	<body bgcolor="#FFFFFF">
+		<input type="button" value="²âÊÔ´òÓ¡" onclick="openApp();">
+		<input type="button" value="²âÊÔÔ¤ÀÀ" onclick="openView();">
+		<!-- 
+		<APPLET CODE="JRPrinterApplet.class" CODEBASE = "applets"
+			ARCHIVE = "jasperreports-3.5.2-applet.jar,commons-logging-1.0.2.jar,commons-collections-2.1.jar"
+			WIDTH="300" HEIGHT="40">
+			</XMP>
+			<PARAM NAME=CODE VALUE="JRPrinterApplet.class">
+			<PARAM NAME = ARCHIVE VALUE = "jasperreports-3.5.2-applet.jar,commons-logging-1.0.2.jar,commons-collections-2.1.jar" >
+			<PARAM NAME="type" VALUE="application/x-java-applet;version=1.2.2">
+			<PARAM NAME="scriptable" VALUE="false">
+			<PARAM NAME="REPORT_URL" VALUE="../JRPrintServlet">
+		</APPLET>
+		 -->
+	</body>
+</html>

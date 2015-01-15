@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<servlet>
+		<servlet-name>JRPrintServlet</servlet-name>
+		<servlet-class>com.mengya.servlet.JRPrintServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>JRPrintServlet</servlet-name>
+		<url-pattern>/JRPrintServlet</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>JRPDFServlet</servlet-name>
+		<servlet-class>com.mengya.servlet.JRPDFServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>JREXLServlet</servlet-name>
+		<servlet-class>com.mengya.servlet.JREXLServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>JRRTFServlet</servlet-name>
+		<servlet-class>com.mengya.servlet.JRRTFServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>JRHTMLServlet</servlet-name>
+		<servlet-class>com.mengya.servlet.JRHTMLServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>JRJXLServlet</servlet-name>
+		<servlet-class>com.mengya.servlet.JRJXLServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>JRODFServlet</servlet-name>
+		<servlet-class>com.mengya.servlet.JRODFServlet</servlet-class>
+	</servlet>
+
+
+	<!-- JasperReport包中自带的Servlet，用来做为HTML形式显示报表的时候报表的图片，要在这里配置上，图片在jasperReport包中 -->
+	<servlet>
+		<servlet-name>JasperReportImageServlet</servlet-name>
+		<servlet-class>
+			net.sf.jasperreports.j2ee.servlets.ImageServlet
+		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>JasperReportImageServlet</servlet-name>
+		<url-pattern>/image</url-pattern>
+	</servlet-mapping>
+
+
+
+	
+	<servlet-mapping>
+		<servlet-name>JRPDFServlet</servlet-name>
+		<url-pattern>/JRPDFServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>JREXLServlet</servlet-name>
+		<url-pattern>/JREXLServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>JRRTFServlet</servlet-name>
+		<url-pattern>/JRRTFServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>JRHTMLServlet</servlet-name>
+		<url-pattern>/JRHTMLServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>JRJXLServlet</servlet-name>
+		<url-pattern>/JRJXLServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>JRODFServlet</servlet-name>
+		<url-pattern>/JRODFServlet</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

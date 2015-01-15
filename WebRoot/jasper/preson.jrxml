@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<style name="title" isDefault="false" vAlign="Middle" pattern="" fontName="宋体" fontSize="20" isItalic="false" isUnderline="false" pdfFontName="C:\WINDOWS\Fonts\SIMKAI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+	<style name="cellCenterNoBorder" isDefault="false" hAlign="Center" vAlign="Middle" lineSpacing="Single" fontName="宋体" fontSize="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="C:\WINDOWS\Fonts\SIMKAI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+	<style name="cellleftNoBorder" isDefault="false" hAlign="Left" vAlign="Middle" lineSpacing="Single" fontName="宋体" fontSize="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="C:\WINDOWS\Fonts\SIMKAI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+	<style name="cellRightNoBorder" isDefault="false" hAlign="Right" vAlign="Middle" lineSpacing="Single" fontName="宋体" fontSize="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="C:\WINDOWS\Fonts\SIMKAI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+	<style name="cellCenterHasBorder" isDefault="false" hAlign="Center" vAlign="Middle" lineSpacing="Single" fontName="宋体" fontSize="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="C:\WINDOWS\Fonts\SIMKAI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true">
+		<pen lineWidth="0.5" lineColor="#000000"/>
+	</style>
+	<style name="cellleftHasBorder" isDefault="false" vAlign="Middle" lineSpacing="Single" fontName="宋体" fontSize="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="C:\WINDOWS\Fonts\SIMKAI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+	<style name="cellRightHasBorder" isDefault="false" hAlign="Right" vAlign="Middle" lineSpacing="Single" fontName="宋体" fontSize="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="C:\WINDOWS\Fonts\SIMKAI.TTF" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+	<parameter name="year" class="java.lang.String"/>
+	<parameter name="unit_mc" class="java.lang.String">
+		<parameterDescription><![CDATA[纳税人名称]]></parameterDescription>
+	</parameter>
+	<field name="person_Id" class="java.lang.String"/>
+	<field name="person_name" class="java.lang.String"/>
+	<field name="person_age" class="java.lang.String"/>
+	<field name="person_address" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="108" splitType="Stretch">
+			<staticText>
+				<reportElement style="cellCenterNoBorder" x="0" y="75" width="143" height="33"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[单位（个人）名称：]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement style="cellRightNoBorder" x="234" y="50" width="52" height="25"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{year}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="cellleftNoBorder" x="284" y="50" width="41" height="25"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[ 年度]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="title" x="0" y="1" width="555" height="50"/>
+				<textElement textAlignment="Center">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[人 员 信 息 表]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="cellleftNoBorder" x="143" y="75" width="412" height="33"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{unit_mc}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="33" splitType="Stretch">
+			<staticText>
+				<reportElement style="cellCenterHasBorder" x="0" y="0" width="95" height="33"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[人员编号]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="cellCenterHasBorder" x="234" y="0" width="86" height="33"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[人员年龄]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="cellCenterHasBorder" x="320" y="0" width="235" height="33"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[居住地址]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="cellCenterHasBorder" x="95" y="0" width="139" height="33"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[人员姓名]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="33" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement style="cellCenterHasBorder" x="0" y="0" width="95" height="33"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{person_Id}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="cellCenterHasBorder" x="95" y="0" width="139" height="33"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{person_name}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="cellCenterHasBorder" x="234" y="0" width="86" height="33"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{person_age}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="cellCenterHasBorder" x="320" y="0" width="235" height="33"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{person_address}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="58" splitType="Stretch">
+			<staticText>
+				<reportElement style="cellRightNoBorder" x="0" y="29" width="69" height="29"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[打印日期：]]></text>
+			</staticText>
+			<textField pattern="yyyy年MM月dd日" isBlankWhenNull="true">
+				<reportElement style="cellleftNoBorder" x="69" y="29" width="106" height="29"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[java.util.Calendar.getInstance().getTime()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
