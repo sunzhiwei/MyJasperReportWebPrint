@@ -1,7 +1,7 @@
 package com.mengya.bean;
 
 public class Person {
-	private String person_Id;
+	private String person_Id=“”;
 
 	private String person_name;
 
